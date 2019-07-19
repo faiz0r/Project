@@ -1,0 +1,25 @@
+a{
+    color: #6c757d;
+    transition: ease-in-out .15s;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a.Instagram:hover {
+    color: #c32aa3;
+    transition: ease-in-out;
+}
+
+a.Snapchat:hover {
+    color: #fffc00 ;
+}
+
+a.Facebook:hover {
+    color:#3b5998;
+}
+
+a.Twitter:hover {
+    color: #1da1f2 ;
+}

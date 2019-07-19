@@ -1,0 +1,9 @@
+@font-face {
+    font-family: Library3am;
+    src: url('src\assets\Library 3 am.otf');
+    font-weight:400;
+}
+
+h1 {
+    font-family: Library3am, Helvetica, Arial, sans-serif;
+}
