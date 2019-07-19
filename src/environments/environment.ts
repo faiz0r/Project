@@ -4,14 +4,6 @@
 
 export const environment = {
   production: false,
-  firebase: {
-    apiKey: "AIzaSyAVGajhf5qP97ji8pdZseWv1C8lh_U1as8",
-    authDomain: "flexnation-fec32.firebaseapp.com",
-    databaseUrl: "https://flexnation-fec32.firebaseio.com",
-    projectId: "flexnation-fec32",
-    storageBucket: "",
-    messagingSenderId: "1063437095188"
-  }
 };
 
 /*
