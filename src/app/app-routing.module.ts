@@ -4,6 +4,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { SigninComponent } from './signin/signin.component';
 import { TopsComponent } from './products/tops/tops.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   {path: 'tops', component: TopsComponent},
   {path: 'checkout', component: CheckoutComponent},
   {path: 'signin', component: SigninComponent},
+  {path: 'signup', component: SignupComponent},
   {path: '**', redirectTo: 'home'}
 ];
 

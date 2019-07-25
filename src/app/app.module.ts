@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AngularFireModule } from '@angular/fire'
+import { AngularFireDatabaseModule } from '@angular/fire/database'
+import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,9 +18,8 @@ import { SigninComponent } from './signin/signin.component';
 import { ProductsComponent } from './products/products.component';
 import { TopsComponent } from './products/tops/tops.component';
 import { CheckoutComponent } from './checkout/checkout.component';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { environment } from '../environments/environment';
+import { SignupComponent } from './signup/signup.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,18 +28,20 @@ import { environment } from '../environments/environment';
     NavbarComponent,
     FooterComponent,
     SigninComponent,
+    SignupComponent,
     ProductsComponent,
     TopsComponent,
     CheckoutComponent
   ],
   imports: [
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
     BrowserModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
     AppRoutingModule,
     SlimLoadingBarModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
   ],
   providers: [ProductsService],
   bootstrap: [AppComponent]

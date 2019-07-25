@@ -1,0 +1,35 @@
+<!-- <body class="text-center bg-light">
+    <form [formGroup]="registerForm">
+        <div class="form-signup form-group">
+            <div class="mb-3">
+                <fa-icon [icon]="faDumbell" size="7x"></fa-icon>
+            </div>
+            <h1 class="h3 mb-3 font-weight-normal">Please Sign up</h1>
+            <label for="inputEmail" class="sr-only">Email Address</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email Address" required autofocus>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            <label for="inputConfirmPassword" class="sr-only">Confirm Password</label>
+            <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Confirm Password"
+                required>
+            <div class="mb-3">
+                <button class="btn btn-outline-primary" type="submit">Sign Up</button>
+                or
+                <button class="btn btn-outline-secondary" routerLink="/signin">Sign in</button>
+            </div>
+        </div>
+    </form>
+</body> -->
+<form [formGroup]="registerForm">
+        <div class="form-group">
+          <label>Email address</label>
+          <input type="email" formControlName="email" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" class="form-control" formControlName="password" required>
+          <label class="error">{{errorMessage}}</label>
+          <label class="success">{{successMessage}}</label>
+        </div>
+        <button type="submit" (click)="tryRegister(registerForm.value)" class="btn btn-default">Register</button>
+     </form>
