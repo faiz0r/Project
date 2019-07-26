@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faOldRepublic } from '@fortawesome/free-brands-svg-icons';
+import { AuthService } from '../core/auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -9,8 +10,13 @@ import { faOldRepublic } from '@fortawesome/free-brands-svg-icons';
 export class SignupComponent implements OnInit {
 
   faDumbell = faOldRepublic;
+  
+  constructor(private authService: AuthService) { }
 
-  constructor() { }
+  signup(username: string, password: string){
+    this.authService.signup(username, password);
+    console.log(username, password);
+  }
 
   ngOnInit() {
   }

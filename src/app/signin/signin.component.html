@@ -4,10 +4,15 @@
             <fa-icon [icon]="faDumbell" size="7x"></fa-icon>
         </div>
         <h1 class="h3 mb-3 font-weight-normal">Please Sign in</h1>
-        <label for="inputEmail" class="sr-only">Email Address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email Address" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <div class="formGroup">
+            <label for="inputEmail" class="sr-only">Email Address</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email Address" #userEmail required
+                autofocus>
+        </div>
+        <div class="formGroup">
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" #userPwd required>
+        </div>
         <div class="checkbox mb-3">
             <label>
                 <input type="checkbox" value="remember-me">
@@ -15,7 +20,8 @@
             </label>
         </div>
         <div class="mb-3">
-            <button class="btn btn-outline-secondary" type="submit">Sign in</button>
+            <button class="btn btn-outline-secondary" type="submit"
+                (click)="signin(userEmail.value, userPwd.value)">Signin</button>
             or
             <button class="btn btn-outline-primary" routerLink="/signup">Sign up</button>
         </div>
